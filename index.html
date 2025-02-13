@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="w-full h-screen flex flex-col items-center">
+    <h1 class="text-4xl font-bold">Choose your cat warrior</h1>
+
+    <section class="flex gap-4 w-full pt-16 justify-center items-center">
+        <form id="search-form" class="flex gap-4">
+            <select name="warriors" id="warrior-select" class="p-2 border rounded">
+                <option value="none">Please choose by ID or name</option>
+                <option value="id">Choose by ID</option>
+                <option value="name">Choose by Name</option>
+            </select>
+            
+                <input type="text" id="warrior-input" class="p-2 border rounded w-1/2" disabled placeholder="Enter">
+                
+        
+            <button type="submit" id="search-button" class="p-2 border rounded bg-blue-500 text-white">
+                Search
+            </button>
+        </form>
+        
+    </section>
+    <p id="errornotice" class="mt-5 ml-30 text-red-600"></p>
+    <section class="w-full flex h-full mt-32 ml-10 hidden gap-4" id="info">
+        <div id="cat" class="w-1/2 h-1/2">
+            <img src="" alt="cat warrior" id="catImage" class="w-full h-full object-fill">
+        </div>
+        <div id="cat-info" class="w-1/2 h-60">
+            <h2 id="cat-name" class="text-2xl font-bold"></h2>
+            <p id="cat-description" class="mt-4"></p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
